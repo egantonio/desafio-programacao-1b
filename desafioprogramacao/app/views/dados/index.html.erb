@@ -1,0 +1,34 @@
+<div ng-controller="DadoCtrl">
+
+
+
+
+<h1>Desafio de Programação</h1>
+  <input type = "file" file-model = "myFile"/>
+  <button ng-click = "uploadFile()">Carregar Arquivo</button>
+  <button onclick="location.reload();">Atualizar</button>
+
+  <h2>Tabela de dados</h2>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Comprador</th>
+      <th>Descrição</th>
+      <th>Preço Unitário</th>
+      <th>Quantidade</th>
+      <th>Endereço</th>
+      <th>Fornecedor</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="dado in dados" >
+      <td>{{ dado.comprador }}</td>
+      <td>{{ dado.descricao }}</td>
+      <td>{{ dado.preco_unitario }}</td>
+      <td>{{ dado.quantidade }}</td>
+      <td>{{ dado.endereco }}</td>
+      <td>{{ dado.fornecedor }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
